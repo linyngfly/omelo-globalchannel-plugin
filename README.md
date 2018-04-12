@@ -1,23 +1,23 @@
-pomelo-globalchannel-plugin
+omelo-globalchannel-plugin
 ===========================
 
-pomelo-globalchannel-plugin is a plugin for pomelo, it can be used in pomelo(>=0.6).
+omelo-globalchannel-plugin is a plugin for omelo, it can be used in omelo(>=0.6).
 
-In pomelo, channel is an abstract concept which can be understood as a collection of users. In pomelo you can add users into a named channel, and push message to all users in this channel. But it only can be used in the same server, which means it does not support distributed environment.
+In omelo, channel is an abstract concept which can be understood as a collection of users. In omelo you can add users into a named channel, and push message to all users in this channel. But it only can be used in the same server, which means it does not support distributed environment.
 
-The global channel solve this problem. It uses persistent storage to do this thing. You can use it to store users in distributed environment and do same things as local channel does in pomelo.
+The global channel solve this problem. It uses persistent storage to do this thing. You can use it to store users in distributed environment and do same things as local channel does in omelo.
 
 
 ##Installation
 
 ```
-npm install pomelo-globalchannel-plugin
+npm install omelo-globalchannel-plugin
 ```
 
 ##Usage
 
 ```
-var globalChannel = require('pomelo-globalchannel-plugin');
+var globalChannel = require('omelo-globalchannel-plugin');
 
 app.use(globalChannel, {globalChannel: {
   host: '127.0.0.1',
@@ -80,7 +80,7 @@ destroy a global channel
 Global channel use redis as a default persistent storage, you can change it with your own implementation.
 
 ```
-var globalChannel = require('pomelo-globalchannel-plugin');
+var globalChannel = require('omelo-globalchannel-plugin');
 var mysqlGlobalChannelManager = require('./mysqlGlobalChannelManager');
 
 app.use(globalChannel, {globalChannel: {
